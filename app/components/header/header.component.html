@@ -1,0 +1,31 @@
+
+<div class="toolbar">
+  <div class="d-none d-lg-block nav-links">
+    <a class="col-2" [routerLink]="[{ outlets: { contentOutlet: ['home-component'] } }]" routerLinkActive="active">
+      Home
+    </a>
+    <a class="col-2" [routerLink]="[{ outlets: { contentOutlet: ['vita-component'] } }]" routerLinkActive="active">
+      Vita
+    </a>
+    <a  class="col-2" [routerLink]="[{ outlets: { contentOutlet: ['kontakt-component'] } }]" routerLinkActive="active">
+      Kontakt
+    </a>
+    <a [routerLink]="[{ outlets: { contentOutlet: ['impressum-component'] } }]" routerLinkActive="active">
+      Impressum
+    </a>
+  </div>
+  <div class="d-lg-none">
+    <div class="col-2">
+      <button mat-button [matMenuTriggerFor]="menu">Menu</button>
+      <mat-menu #menu="matMenu">
+        <button mat-menu-item [routerLink]="[{ outlets: { contentOutlet: ['home-component'] } }]" routerLinkActive="active">Home</button>
+        <button mat-menu-item [routerLink]="[{ outlets: { contentOutlet: ['vita-component'] } }]" routerLinkActive="active">Vita</button>
+        <button mat-menu-item [routerLink]="[{ outlets: { contentOutlet: ['kontakt-component'] } }]" routerLinkActive="active">Kontakt</button>
+        <button mat-menu-item [routerLink]="[{ outlets: { contentOutlet: ['impressum-component'] } }]" routerLinkActive="active">Impressum</button>
+      </mat-menu>
+    </div>
+    <div class="col-10"></div>
+
+  </div>
+
+</div>
